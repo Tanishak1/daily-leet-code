@@ -14,16 +14,22 @@ public class JavaSolutionTest {
     }
     private static void testTwoSum() throws Exception {
         try (var loader = compile("solutions/arrays/TwoSum.java")) {
-            var instance = loader.loadClass("Solution").getDeclaredConstructor().newInstance();
-            var method = instance.getClass().getMethod("twoSum", int[].class, int.class);
+            var constructor = loader.loadClass("Solution").getDeclaredConstructor();
+            constructor.setAccessible(true);
+            var instance = constructor.newInstance();
+            var method = instance.getClass().getDeclaredMethod("twoSum", int[].class, int.class);
+            method.setAccessible(true);
             check(Arrays.equals((int[])method.invoke(instance, new int[]{2,7,11,15}, 9), new int[]{0,1}), "two sum standard");
             check(Arrays.equals((int[])method.invoke(instance, new int[]{3,3}, 6), new int[]{0,1}), "two sum duplicates");
         }
     }
     private static void testLongestSubstring() throws Exception {
         try (var loader = compile("solutions/strings/LongestSubstringWithoutRepeatingCharacters.java")) {
-            var instance = loader.loadClass("Solution").getDeclaredConstructor().newInstance();
-            var method = instance.getClass().getMethod("lengthOfLongestSubstring", String.class);
+            var constructor = loader.loadClass("Solution").getDeclaredConstructor();
+            constructor.setAccessible(true);
+            var instance = constructor.newInstance();
+            var method = instance.getClass().getDeclaredMethod("lengthOfLongestSubstring", String.class);
+            method.setAccessible(true);
             check((int)method.invoke(instance, "abcabcbb") == 3, "substring repeated");
             check((int)method.invoke(instance, "") == 0, "substring empty");
             check((int)method.invoke(instance, "bbbbb") == 1, "substring identical");
