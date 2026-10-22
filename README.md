@@ -8,9 +8,9 @@ Java algorithm practice repository maintained by Tanishak Tyagi.
 
 | Metric | Repository progress |
 |---|---:|
-| Java solutions committed | 5 |
-| Easy | 4 |
-| Medium | 1 |
+| Java solutions committed | 7 |
+| Easy | 5 |
+| Medium | 2 |
 | Hard | 0 |
 | Local test cases included | 5 |
 | LeetCode accepted submissions verified | Not verified |
@@ -26,6 +26,9 @@ These figures describe the files currently tracked here, not the user's official
 | 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy | Hash Set | [Java](solutions/arrays/ContainsDuplicate.java) | Unverified |
 | 242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Easy | Hash Map | [Java](solutions/strings/ValidAnagram.java) | Unverified |
 | 3 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Medium | Sliding Window | [Java](solutions/strings/LongestSubstringWithoutRepeatingCharacters.java) | Unverified |
+
+| 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy | Stack | [Java](solutions/stack/ValidParentheses.java) | Unverified |
+| 238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | Medium | Prefix/Suffix Products | [Java](solutions/arrays/ProductOfArrayExceptSelf.java) | Unverified |
 
 ## Quality checks
 
